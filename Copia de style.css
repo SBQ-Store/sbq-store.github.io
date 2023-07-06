@@ -1,0 +1,204 @@
+* {
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	line-height: 1.15;
+	font-family: 'Roboto', sans-serif;
+}
+
+@font-face {
+	font-family: PPNeueMachina-Light;
+	src: url(Assets/fonts/PPNeueMachina-Light.woff);
+  }
+@font-face {
+	font-family: PPNeueMachina-Regular;
+	src: url(Assets/fonts/PPNeueMachina-Regular.woff);
+  }
+@font-face {
+	font-family: PPNeueMachina-Ultrabold;
+	src: url(Assets/fonts/PPNeueMachina-Ultrabold.woff);
+  }
+
+.offer__title, .form__title, .form__button {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	line-height: 1.12;
+	margin: 0;
+}
+
+.offer__description, .form__description, .form__legal {
+	opacity: 0.8;
+	margin: 9pt 0;
+}
+
+body {
+	background-color: black;
+	margin: 0;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	max-width: 100%;
+	/*margin: 20px auto;*/
+	flex-wrap: wrap;
+	background-image: url("Assets/img/LANDING-FONDO-SBQ-2.jpg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	/*object-fit: fill;*/
+	/*width: 1280px;
+	height: 1920px;*/
+	overflow: hidden;
+}
+
+.offer, .form {
+	flex: 1;
+	min-width: calc(320px - 40px);
+	margin: 20px;
+}
+
+.offer__image {
+	max-height: 40px;
+	margin-bottom: 10px;
+}
+
+.offer__title {
+	font-size: 28pt;
+	color: var(--secondary-color, #fafafa);
+}
+
+.offer__description {
+	line-height: 1.15;
+	font-size: 14pt;
+	color: var(--secondary-color, #fafafa);
+}
+
+.form {
+	/*background-color:  var(--secondary-color, #fafafa);*/
+	text-align: center;
+	margin-top: 0;
+	width: 420px;
+	height: 300px;
+	padding: 24px;
+	object-fit: center;
+	color: var(--secondary-color, #333333);
+}
+
+.form__title {
+	font-size: 28pt;
+	font-family: PPNeueMachina-Ultrabold;
+	text-align: center;
+}
+
+.form__description {
+	font-family: PPNeueMachina-Regular;
+	font-size: 15pt;
+	opacity: 1;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.form__input {
+	text-align: center;
+	font-family: PPNeueMachina-Regular;
+	width: 100%;
+	height: 45px;
+	font-size: 14px;
+	padding: 10px;
+	border-radius: 5px;
+	margin: 10px 0;
+	display: block;
+	border: 1px solid var(--tertiary-color, #ae2633);
+	background-color: var(--tertiary-color, #fafafa);
+	color: var(--secondary-color, #333333);
+}
+
+.form__input::placeholder {
+	text-align: center;
+	font-family: PPNeueMachina-Light;
+	font-size: 17px;
+	color: var(--secondary-color, #333333);
+	opacity: 0.9;
+}
+
+.radiusb{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.check{
+	appearance: none;
+	width: 30px;
+	height: 30px;
+}
+
+.check{
+	cursor: pointer;
+	margin-top: 10px;
+    background-color: transparent;
+    width: 35px;
+    height: 35px;
+    appearance: none;
+    border: 2px solid #e24f00;
+	border-radius: 5px;
+}
+.check:checked{
+	cursor: pointer;
+	background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+    background-color: #e24f00;
+    width: 35px;
+    height: 35px;
+    appearance: none;
+    border: 2px solid #e24f00;
+	border-radius: 5px;
+}
+
+.form__legal {
+	color: white;
+	font-family: PPNeueMachina-Regular;
+	text-align: justify;
+	margin: 30px 0px 20px 0px;
+	font-size: 17pt;
+	display: block;
+	opacity: 1;
+}
+
+.form__button {
+	margin-top: 30px;
+	width: 300px;
+	height: 60px;
+	border-radius: 30px;
+	background-color: #e24f00;
+	color: var(--secondary-color, #fafafa);
+	box-shadow: inset 0 0 15px 0px #ffffff7d;
+	border: none;
+	outline: none;
+	font-weight: 700;
+	/*font-size: 18pt;*/
+	font-size: 1.5rem;
+	text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+	box-shadow: 0 1px 0 rgba(255,255,255,.5) inset,
+	  0 1px 3px rgba(0,0,0,.2);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(10%,#f90),to(#e76a00));
+	background-image: linear-gradient(#f90 10%,#e76a00 100%);
+}
+
+.form__button:hover {
+	opacity: 0.9;
+}
+
+.form__button:active {
+	opacity: 0.8;
+}
+
+.final_icon{
+	margin-top: 40px;
+}
+
+.marcainicial p, .marcafinal p{
+	font-family: PPNeueMachina-Regular;
+	color: #828282;
+}

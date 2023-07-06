@@ -1,0 +1,71 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <title>PAGE_TITLE</title>
+  <meta name="description" content="Página para captar información de los clientes">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <meta name="theme-color" content="#fafafa">
+  <link href="colors.css" rel="stylesheet">
+</head>
+<body>
+  <div class="marcainicial"><p>@SBQSTORE</p></div>
+  <main class="wrapper">
+    <section class="form">
+      <img class="LOGO-SBQ-1" src="LOGO-SBQ-1.png" alt="Logo" width="173px" height="auto"/>
+      <h2 class="form__title">
+        ¡CONOZCÁMONOS MEJOR!
+      </h2>
+      <p class="form__description">
+        Ingresa aquí los datos del cliente 
+      </p>
+      <form id="form-SBQ" >
+        <input class="form__input" type="text" required name="Nombre" placeholder="Nombre completo"/>
+        <input class="form__input" type="email" required name="Correo" placeholder="Correo electrónico"/>
+        <input class="form__input" type="number" required name="Movil" placeholder="Celular"/>
+        <div class="radiusb">
+        <input type="checkbox" required id="check1" class="check" value="legal_checkbox"><label class="form__legal"> ¿Aceptas nuestra política <br>de tratamiento de datos?</label><br>
+        </div>
+        <!--<small class="form__legal">
+            Al hacer clic en el siguiente botón, acepta nuestros términos y condiciones de uso. 
+            Conozca cómo recopilamos, usamos y compartimos sus datos en nuestra <a target="_blank" href="politica-privacidad.txt">política de privacidad.</a>
+        </small>-->
+        <button onclick="SendFormGoogleSheets()" class="form__button" type="submit">Enviar</button>
+      </form>
+      <div class="final_icon">
+        <img src="LOGO-SBQ-2.png" alt="LOGO-SBQ-2" width="80px" height="auto">
+      </div> 
+    </section> 
+  </main>
+  <div class="marcafinal"><p>WWW.SBQSTORE.COM</p></div>
+  <!--[if IE]>
+    <p class="browserupgrade">
+      Estás usando un navegador <strong>obsoleto</strong>.
+      Por favor <a href="browsehappy" target="_blank">actualiza tu navegador</a> para mejorar tu experiencia y seguridad.
+    </p>
+  <![endif]-->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="crossorigin="anonymous"></script>
+  <link href="style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap" rel="stylesheet">
+  <script>
+    function SendFormGoogleSheets (){
+	$.ajax({
+	  url:'https://script.google.com/macros/s/AKfycbyVMVKAG97C-qgMgOphnSmzgr209jYKoEd1AqJvQINYtMy0ll5oHSzpdvkjS42xzBTA/exec',
+	  type:'post',
+	  data:$("#form-SBQ").serializeArray(),
+	  success: function(){
+		alert("Registro exitoso")
+	  },
+	  error: function(){
+		alert("Error en el Registro")
+	  }
+  });
+  window.location.reload();
+}
+  </script>
+</body>
+</html>
